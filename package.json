@@ -32,7 +32,7 @@
     "commands": [
       {
         "command": "visualHolyC.open",
-        "title": "TempleOS: Boot aiwnios.wasm",
+        "title": "TempleOS: Boot",
         "category": "VisualHolyC"
       },
       {

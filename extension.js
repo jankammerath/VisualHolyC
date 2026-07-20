@@ -38,7 +38,7 @@ function createOrRevealPanel(context) {
 
   currentPanel = vscode.window.createWebviewPanel(
     "visualHolyC.aiwnios",
-    "TempleOS (aiwnios.wasm)",
+    "TempleOS",
     vscode.ViewColumn.Active,
     {
       enableScripts: true,
