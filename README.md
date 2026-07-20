@@ -14,6 +14,17 @@ of TempleOS/HolyC.
 The panel keeps running in the background (`retainContextWhenHidden`), so switching editor
 tabs won't reset the OS state.
 
+## Workspace mounting
+
+When the panel opens, the extension reads your first workspace folder (skipping `.git`,
+`node_modules`, `out`, `dist`, and any individual file over 2 MB, up to a 32 MB total budget) and
+writes it into the wasm's virtual filesystem before boot, at `/T/VSCode` — which TempleOS/HolyC
+sees as drive **`T:\VSCode`**. The status line in the bottom-left corner of the panel confirms how
+many files were mounted (and whether the copy was truncated due to the size budget).
+
+This is a one-way, in-memory copy taken at boot time — changes made inside TempleOS are not
+written back to your workspace on disk.
+
 ## HolyC language support
 
 `.hc`/`.HC` files get syntax highlighting via a bundled TextMate grammar (`syntaxes/holyc.tmLanguage.json`).
