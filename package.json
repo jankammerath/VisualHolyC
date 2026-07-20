@@ -1,9 +1,9 @@
 {
   "name": "visual-holyc",
-  "displayName": "VisualHolyC — TempleOS in VS Code",
-  "description": "Boot aiwnios.wasm (TempleOS compiled to WebAssembly) inside a VS Code webview.",
+  "displayName": "Visual HolyC — TempleOS/HolyC directly in VS Code",
+  "description": "Write HolyC, boot TempleOS directly in VS Code, compile and execute.",
   "version": "0.1.0",
-  "publisher": "visualholyc",
+  "publisher": "jankammerath",
   "private": true,
   "license": "MIT",
   "engines": {
