@@ -40,4 +40,5 @@ npx @vscode/vsce package
 ## Credits
 
 - [templeos.reiko.app](https://templeos.reiko.app/) — the aiwnios WebAssembly build of TempleOS.
+- Languages support from [Sinjs' HolyC Language for VSCode](https://github.com/sinjs/holyc-vscode-language)
 - Terry A. Davis — original creator of TempleOS.
