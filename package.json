@@ -10,7 +10,8 @@
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Programming Languages"
   ],
   "keywords": [
     "templeos",
@@ -39,6 +40,21 @@
         "command": "visualHolyC.restart",
         "title": "TempleOS: Restart",
         "category": "VisualHolyC"
+      }
+    ],
+    "languages": [
+      {
+        "id": "holyc",
+        "aliases": ["HolyC", "holyc"],
+        "extensions": [".hc", ".HC", ".hc.z", ".HC.Z"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "holyc",
+        "scopeName": "source.hc",
+        "path": "./syntaxes/holyc.tmLanguage.json"
       }
     ]
   }
