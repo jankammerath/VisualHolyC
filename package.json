@@ -6,6 +6,11 @@
   "publisher": "jankammerath",
   "private": true,
   "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jankammerath/VisualHolyC.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
