@@ -1,0 +1,16 @@
+{
+  "iconDefinitions": {
+    "holyc": {
+      "iconPath": "../assets/HolyC.png"
+    }
+  },
+  "fileExtensions": {
+    "hc": "holyc",
+    "HC": "holyc",
+    "hc.z": "holyc",
+    "HC.Z": "holyc"
+  },
+  "languageIds": {
+    "holyc": "holyc"
+  }
+}

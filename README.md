@@ -13,6 +13,19 @@ of TempleOS/HolyC.
 The panel keeps running in the background (`retainContextWhenHidden`), so switching editor
 tabs won't reset the OS state.
 
+## HolyC language support
+
+`.hc`/`.HC` files get syntax highlighting via a bundled TextMate grammar (`syntaxes/holyc.tmLanguage.json`).
+
+To also show the HolyC icon (`assets/HolyC.png`) on `.hc` files in the Explorer, enable the file
+icon theme this extension contributes:
+
+1. Open the Command Palette and run **Preferences: File Icon Theme**.
+2. Select **HolyC File Icons**.
+
+> Note: VS Code only allows one active file icon theme at a time, and this theme only defines an
+> icon for HolyC files — other files will show without icons while it's selected.
+
 ## How it works
 
 The extension bundles the Emscripten-compiled `system/aiwnios.js` glue script and

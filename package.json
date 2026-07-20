@@ -56,6 +56,13 @@
         "scopeName": "source.hc",
         "path": "./syntaxes/holyc.tmLanguage.json"
       }
+    ],
+    "iconThemes": [
+      {
+        "id": "holyc-icons",
+        "label": "HolyC File Icons",
+        "path": "./fileicons/holyc-icon-theme.json"
+      }
     ]
   }
 }
