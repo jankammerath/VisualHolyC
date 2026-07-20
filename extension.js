@@ -212,7 +212,7 @@ async function getHtml(webview, extensionUri) {
       const wasmUri = ${JSON.stringify(wasmUri.toString())};
       const jsUri = ${JSON.stringify(jsUri.toString())};
       const workspaceManifest = ${manifestJson};
-      const MOUNT_ROOT = "/T/VSCode";
+      const MOUNT_ROOT = "/VisualHolyC";
 
       canvas.addEventListener("contextmenu", (e) => e.preventDefault());
       window.addEventListener("click", () => canvas.focus());

@@ -1,9 +1,8 @@
 # VisualHolyC
 
-Run **TempleOS** inside VS Code, via [aiwnios.wasm](https://templeos.reiko.app/) — a WebAssembly port
-of TempleOS/HolyC.
+Build HolyC programs in VSCode, then build and run them in **TempleOS** inside VS Code, powered by [aiwnios.wasm](https://templeos.reiko.app/) — a WebAssembly port of TempleOS/HolyC.
 
-![Visual HolyC](./assets/visualholyc-box.png)
+![Visual HolyC in VSCode](./assets/visualholyc-compile.png)
 
 ## Usage
 
@@ -67,3 +66,5 @@ npx @vscode/vsce package
 - [templeos.reiko.app](https://templeos.reiko.app/) — the aiwnios WebAssembly build of TempleOS.
 - Languages support from [Sinjs' HolyC Language for VSCode](https://github.com/sinjs/holyc-vscode-language)
 - Terry A. Davis — original creator of TempleOS.
+
+![Visual HolyC](./assets/visualholyc-box.png)
