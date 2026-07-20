@@ -3,7 +3,7 @@
 Run **TempleOS** inside VS Code, via [aiwnios.wasm](https://templeos.reiko.app/) — a WebAssembly port
 of TempleOS/HolyC.
 
-[Visual HolyC](./assets/visualholyc-box.png)
+![Visual HolyC](./assets/visualholyc-box.png)
 
 ## Usage
 
