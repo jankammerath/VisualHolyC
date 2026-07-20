@@ -1,0 +1,45 @@
+{
+  "name": "visual-holyc",
+  "displayName": "VisualHolyC — TempleOS in VS Code",
+  "description": "Boot aiwnios.wasm (TempleOS compiled to WebAssembly) inside a VS Code webview.",
+  "version": "0.1.0",
+  "publisher": "visualholyc",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "templeos",
+    "wasm",
+    "webassembly",
+    "aiwnios",
+    "holyc"
+  ],
+  "main": "./extension.js",
+  "scripts": {
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "@vscode/vsce": "^2.32.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "visualHolyC.open",
+        "title": "TempleOS: Boot aiwnios.wasm",
+        "category": "VisualHolyC"
+      },
+      {
+        "command": "visualHolyC.restart",
+        "title": "TempleOS: Restart",
+        "category": "VisualHolyC"
+      }
+    ]
+  }
+}

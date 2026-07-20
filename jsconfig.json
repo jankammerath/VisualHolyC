@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2021",
+    "checkJs": true,
+    "lib": ["ES2021"]
+  },
+  "exclude": ["node_modules", ".vscode-test"]
+}
