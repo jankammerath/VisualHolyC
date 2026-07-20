@@ -99,38 +99,9 @@ function getHtml(webview, extensionUri) {
     background: #000;
     overflow: hidden;
   }
-  #boot-overlay {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    background: #000;
-    color: #33ffff;
-    font-family: "SF Mono", Menlo, Consolas, monospace;
-    text-align: center;
-    cursor: pointer;
-    z-index: 10;
-    user-select: none;
-  }
-  #boot-overlay h1 {
-    color: #ffdd33;
-    letter-spacing: 3px;
-    font-size: 20px;
-    margin: 0;
-  }
-  #boot-overlay .hint {
-    color: #33ffff;
-    opacity: 0.85;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
   #container {
     position: fixed;
     inset: 0;
-    display: none;
   }
   #canvas {
     width: 100%;
@@ -153,59 +124,41 @@ function getHtml(webview, extensionUri) {
 </style>
 </head>
 <body>
-  <div id="boot-overlay">
-    <h1>TEMPLEOS &mdash; aiwnios.wasm</h1>
-    <div class="hint">CLICK OR PRESS ANY KEY TO BOOT</div>
-  </div>
   <div id="container">
     <canvas id="canvas" tabindex="-1"></canvas>
   </div>
   <div id="status"></div>
   <script nonce="${nonce}">
     (function () {
-      const overlay = document.getElementById("boot-overlay");
-      const container = document.getElementById("container");
       const canvas = document.getElementById("canvas");
       const statusEl = document.getElementById("status");
       const wasmUri = ${JSON.stringify(wasmUri.toString())};
       const jsUri = ${JSON.stringify(jsUri.toString())};
 
       canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+      window.addEventListener("click", () => canvas.focus());
 
       function setStatus(text) {
         statusEl.textContent = text || "";
       }
 
-      let booted = false;
-      function boot() {
-        if (booted) {
-          return;
-        }
-        booted = true;
-        overlay.remove();
-        container.style.display = "block";
-        canvas.focus();
+      canvas.focus();
 
-        window.Module = {
-          canvas,
-          locateFile: (path) => (path.endsWith(".wasm") ? wasmUri : path),
-          print: (text) => console.log("[aiwnios]", text),
-          printErr: (text) => console.error("[aiwnios]", text),
-          setStatus: (text) => setStatus(text),
-          onRuntimeInitialized: () => setStatus("running"),
-        };
+      window.Module = {
+        canvas,
+        locateFile: (path) => (path.endsWith(".wasm") ? wasmUri : path),
+        print: (text) => console.log("[aiwnios]", text),
+        printErr: (text) => console.error("[aiwnios]", text),
+        setStatus: (text) => setStatus(text),
+        onRuntimeInitialized: () => setStatus("running"),
+      };
 
-        setStatus("loading...");
-        const script = document.createElement("script");
-        script.nonce = ${JSON.stringify(nonce)};
-        script.src = jsUri;
-        script.onerror = () => setStatus("failed to load aiwnios.js");
-        document.body.appendChild(script);
-      }
-
-      overlay.addEventListener("click", boot, { once: true });
-      window.addEventListener("keydown", boot, { once: true });
-      window.addEventListener("click", () => canvas.focus());
+      setStatus("loading...");
+      const script = document.createElement("script");
+      script.nonce = ${JSON.stringify(nonce)};
+      script.src = jsUri;
+      script.onerror = () => setStatus("failed to load aiwnios.js");
+      document.body.appendChild(script);
     })();
   </script>
 </body>

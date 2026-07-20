@@ -6,9 +6,8 @@ of TempleOS/HolyC.
 ## Usage
 
 1. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`).
-2. Run **VisualHolyC: TempleOS: Boot aiwnios.wasm**.
-3. Click inside the panel (or press any key) to boot the OS.
-4. Use **VisualHolyC: TempleOS: Restart** to reset the running instance.
+2. Run **VisualHolyC: TempleOS: Boot aiwnios.wasm** — the OS boots immediately.
+3. Use **VisualHolyC: TempleOS: Restart** to reset the running instance.
 
 The panel keeps running in the background (`retainContextWhenHidden`), so switching editor
 tabs won't reset the OS state.
