@@ -89,7 +89,7 @@ function getHtml(webview, extensionUri) {
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Security-Policy" content="${csp}" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TempleOS (aiwnios.wasm)</title>
+<title>TempleOS</title>
 <style>
   html, body {
     margin: 0;
